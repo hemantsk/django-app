@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div>
+    <h2>Top Tweets of the day</h2>
+</div>
+
+{% for name, tweet in tweets.items %}
+    <div>
+        <h3>{{ name }} says: </h3>
+        <p>{{ tweet }}</p>
+    </div>
+{% endfor %}
+
+{% endblock %}
